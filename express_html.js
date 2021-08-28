@@ -1,6 +1,6 @@
 //html file kodkkam
 //"__dirname" - file path kittan
-//"__filename" -file name with pathssss
+//"__filename" -file name with pathss
 
 const express=require("express")   //importing express module...const is like var,let
 const app=express()                //expressine app enna objectilott eduth
