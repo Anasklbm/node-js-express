@@ -6,7 +6,9 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var aboutRouter = require('./routes/about.js');
+var aboutRouter = require('./routes/about');
+var objectRouter= require('./routes/object');   // object routesne edukkkunnu
+var ifRouter=require('./routes/if');
 var app = express();
 
 // view engine setup
@@ -22,6 +24,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/about', aboutRouter);
+app.use('/object',objectRouter);  //object page call vannal object routerilott pokum
+app.use('/if',ifRouter);   //if pagil call vannal ifRouterilott pokum
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
